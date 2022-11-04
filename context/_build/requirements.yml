@@ -1,0 +1,22 @@
+---
+collections:
+  - name: ansible.netcommon
+    version: 2.5.1 # pinned for arista.avd 3.4.0
+  - name: ansible.posix
+  - name: ansible.utils
+# - name: arista.avd  # Problem with the requests package used by dependcy arista.cvp
+  - name: arista.eos
+  - name: cisco.ios
+  - name: community.docker
+  - name: community.general
+  - name: community.mysql
+  - name: community.postgresql
+  - name: fortinet.fortimanager
+  - name: fortinet.fortios
+  - name: infoblox.nios_modules
+  - name: lvrfrc87.git_acp
+  - name: napalm.napalm
+  - name: netbox.netbox
+  - name: paloaltonetworks.panos
+roles:
+  - name: batfish

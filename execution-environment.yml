@@ -13,7 +13,7 @@ images:
 
 dependencies:
   galaxy: requirements.yml
-  #python: requirements.txt
+  python: requirements.txt
   #system: bindep.txt
 
 additional_build_steps:
