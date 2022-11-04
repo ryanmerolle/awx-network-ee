@@ -3,7 +3,7 @@ collections:
   - name: ansible.netcommon
   - name: ansible.posix
   - name: ansible.utils
-  - name: arista.avd
+# - name: arista.avd  # Problem with the requests package used by dependcy arista.cvp
   - name: arista.eos
   - name: cisco.ios
   - name: community.docker
