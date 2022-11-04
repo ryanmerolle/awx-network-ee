@@ -19,4 +19,4 @@ collections:
   - name: netbox.netbox
   - name: paloaltonetworks.panos
 roles:
-  - name: batfish
+  - name: batfish.base
