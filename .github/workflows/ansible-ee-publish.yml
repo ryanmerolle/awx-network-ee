@@ -54,17 +54,14 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get current date
-        id: date
-        run: |
-          echo "{date}={$(date +'%Y-%m-%d')}" >> $GITHUB_STATE
+      #- name: Get current date
+      #  id: date
+      #  run: |
+      #    echo "{date}={$(date +'%Y-%m-%d')}" >> $GITHUB_STATE
 
-      - name: Build EE image
+      - name: Build & Push AWX EE image
         run: |
           ansible-builder build \
           --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
-          -v 3
-
-      - name: Push EE image
-        run: |
+          -v 3 && \
           docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
