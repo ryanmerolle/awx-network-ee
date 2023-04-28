@@ -1,14 +1,11 @@
 # awx-network-ee
 
-Example awx-network execution envrironment build using forked & updated images:
+This now uses the updated ansible-builder v3 refactor.
 
-- [python-base-image](https://github.com/ryanmerolle/python-base-image) - updated to CentOS stream9 and Python 3.9
-- [python-builder-image](https://github.com/ryanmerolle/python-builder-image) - updated to CentOS stream9 and Python 3.9.
-- [ansible-builder](https://github.com/ryanmerolle/ansible-builder) - updated to CentOS stream9 and Python 3.9.
-- [ansible-runner](https://github.com/ryanmerolle/ansible-runner) - updated to CentOS stream9 and Python 3.9.  Added tags for Ansible 2.13 & eventually 2.14
+This new version of ansible-builder addresses a lot of the issues with not being able to build ansible execution environments if you are using a custom built image with your internal package repos.
 
 ## Building
 
 ```bash
-ansible-builder build -t awx-network-ee:2.12
+ansible-builder build -t awx-network-ee:latest -v 3
 ```
