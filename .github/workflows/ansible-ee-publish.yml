@@ -62,11 +62,9 @@ jobs:
       - name: Build EE image
         run: |
           ansible-builder build \
-          --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}${{ env.date }} \
-          --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}latest \
+          --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
           -v 3
 
       - name: Push EE image
         run: |
-          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}${{ env.date }} && \
           docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}latest && \
