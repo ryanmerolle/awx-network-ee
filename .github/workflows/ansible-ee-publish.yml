@@ -62,11 +62,11 @@ jobs:
       - name: Build EE image
         run: |
           ansible-builder build \
-          --tag ghcr.io/${{ env.GITHUB_REPOSITORY }}:${{ env.date }} \
-          --tag ghcr.io/${{ env.GITHUB_REPOSITORY }}:latest \
+          --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.date }} \
+          --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
           -v 3
 
       - name: Push EE image
         run: |
-          docker push ghcr.io/${{ env.GITHUB_REPOSITORY }}:${{ env.date }} && \
-          docker push ghcr.io/${{ env.GITHUB_REPOSITORY }}:latest && \
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.date }} && \
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest && \
