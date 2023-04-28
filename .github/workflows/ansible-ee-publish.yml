@@ -1,4 +1,4 @@
-name: Build nightly AWX EE image
+name: Publish AWX EE image
 
 on:
   schedule:
@@ -67,4 +67,4 @@ jobs:
 
       - name: Push EE image
         run: |
-          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest && \
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
