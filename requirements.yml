@@ -1,10 +1,11 @@
 ---
 collections:
   - name: ansible.netcommon
-    version: 2.5.1 # pinned for arista.avd 3.4.0
+    # version: 2.5.1
   - name: ansible.posix
+  - name: ansible.scm
   - name: ansible.utils
-# - name: arista.avd  # Problem with the requests package used by dependcy arista.cvp
+  - name: arista.avd
   - name: arista.eos
   - name: cisco.ios
   - name: community.docker

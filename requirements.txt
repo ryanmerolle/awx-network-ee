@@ -1,1 +1,12 @@
+Jinja2
+ansible-pylibssh
+ara
+docker
+infoblox-client
+jmespath
+jsondiff
+napalm
+netbox-python
 netutils
+ntc-templates
+pynetbox
