@@ -19,5 +19,8 @@ additional_build_files:
       dest: configs
 
 additional_build_steps:
-  prepend_base:
-    - RUN yum update -y && yum install python39 -y
+  prepend_base: |
+    RUN yum update -y && \
+    yum install glibc-all-langpacks langpacks-en -y && \
+    yum upgrade -y && \
+    yum install python39 -y

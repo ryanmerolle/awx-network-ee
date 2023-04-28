@@ -64,7 +64,7 @@ jobs:
           --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
           --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.DATE }} \
           --container-runtime docker \
-          -v 2
+          -v 3
 
       - name: Push AWX EE image
         run: |
