@@ -63,6 +63,6 @@ jobs:
         run: |
           ansible-builder build \
           --tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
-          -v 3 && \
+          --container-runtime docker \
           docker image ls && \
           ghcr.io/ryanmerolle/awx-network-ee:latest
