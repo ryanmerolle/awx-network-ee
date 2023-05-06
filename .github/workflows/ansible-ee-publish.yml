@@ -42,7 +42,7 @@ jobs:
           python-version: '3.9'
 
       - name: Install ansible-builder
-        run: pip3 install ansible-builder==3.0.0rc1
+        run: pip3 install ansible-builder==3.0.0rc2
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
